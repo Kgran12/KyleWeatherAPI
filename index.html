@@ -4,34 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
     <title>Weather Dashboard</title>
 </head>
 
-<body class="flex-column min-100 vh">
-    <header class="hero">
-        <h1 class="app-title">Weather Dashboard</h1>
-        <p>Search for city to find the weather forcast!</p>
-    </header>
-
-    <main class="flex-row justify-space between">
+<body>
+    <header class="heading">Weather Dashboard</header>
+    <main id="mainContainer" class="container">
         <div class="card">
-            <h3 class="card-header text-uppercase">Search for a City</h3>
-            <form id="user-form" class="card-body">
-                <label class="form-label" for="city"></label>
-                <input name="city" id="city" type="text" autofocus="true" class="form-input" />
-                <button type="submit" class="btn">Get the Weather Forcast</button>
-            </form>
-        </div>
-        <div class="col-12 col-md-8">
-            <h2 class="subtitle">Weather Results: <span id="weather-search-result"></span></h2>
-            <div id="weather-container" class="flex-row justify-space-between"></div>
-        </div>
-    </main>
-
-    <script src="./assets/js/script.js"></script>
+            <div class="columnOne">
+                <div id="search">
+                    <h1 class="title">Search for a City:</h1>
+                    <form id="citySearch">
+                        <input name="city" type="text" placeholder="Mesa" id="city" autfocus="true" class="cityInput"/>
+                        <button type="submit" id="searchBtn" class="searchBtn">See The Weather</button> 
+                    </form>
+                </div>
+            </div>
+    <script src="./assets/script.js"></script>
 
 </body>
 
