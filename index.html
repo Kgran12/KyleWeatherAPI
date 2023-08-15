@@ -4,23 +4,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./assets/style.css" />
     <title>Weather Dashboard</title>
 </head>
 
 <body>
-    <header class="heading">Weather Dashboard</header>
-    <main id="mainContainer" class="container">
-        <div class="card">
-            <div class="columnOne">
-                <div id="search">
-                    <h1 class="title">Search for a City:</h1>
-                    <form id="citySearch">
-                        <input name="city" type="text" placeholder="Mesa" id="city" autfocus="true" class="cityInput"/>
-                        <button type="submit" id="searchBtn" class="searchBtn">See The Weather</button> 
-                    </form>
-                </div>
+    <header class="p-4 mb-5 bg-dark text-white header">Weather Dashboard</header>
+    <main>
+        <aside class="search-area">
+            <div class="search-box">
+                <h3>Search for a City</h3>
+                <form>
+                    <div class="form-row align-items-center">
+                        <div class="col-auto search-field">
+                            <label class="sr-only" for="cityName">City</label>
+                            <input type="text" class="form-control mb-2" id="cityName" placeholder="City Name">
+                        </div>
+                        <div class="col-auto search-button-pannel">
+                            <button type="submit" class="btn btn-primary mb-2" id="searchBtn">Search</button>
+                        </div>
+                    </div>
+                    <div class="city-list">
+                        <ul class="list-group" id="cityList"></ul>
+                    </div>
+                </form>
             </div>
+        </aside>
+        <section class="results-pannel">
+            <div class="current-results-pannel">
+                <div class="name-block"></div>
+                <h3 id="cityNameDisplay">
+                </h3>
+            </div>
+            <div>
+                <p class="current-results" id="temp"></p>
+            </div>
+            <div>
+                <p class="current-results" id="humidity"></p>
+            </div>
+            <div>
+                <p class="current-results" id="windSpeed"></p>
+            </div>
+            <div>
+                <p class="current-results" id="uvIndex"></p>
+            </div>
+            <div class="five-day-pannel">
+                <h3>5-Day Forecast:</h3>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 id="dateZero"></h5>
+                                </div>
+                                <div class="card-body">
+                                    <img src="" alt="" id="iconZero">
+                                    <p class="card-text" id="tempZero"></p>
+                                    <p class="card-text" id="humidityZero"></p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 id="dateOne"></h5>
+                                </div>
+                                <div class="card-body">
+                                    <img src="" alt="" id="iconOne">
+                                    <p class="card-text" id="tempOne"></p>
+                                    <p class="card-text" id="humidityOne"></p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 id="dateTwo"></h5>
+                                </div>
+                                <div class="card-body">
+                                    <img src="" alt="" id="iconTwo">
+                                    <p class="card-text" id="tempTwo"></p>
+                                    <p class="card-text" id="humidityTwo"></p>
+
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 id="dateThree"></h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <img src="" alt="" id="iconThree">
+                                        <p class="card-text" id="tempThree"></p>
+                                        <p class="card-text" id="humidityThree"></p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class ="col">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 id="dateFour"></h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <img src="" alt="" id="iconFour">
+                                        <p class="card-text" id="tempFour"></p>
+                                        <p class="card-text" id="humidityFour"></p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+        </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="./assets/script.js"></script>
 
 </body>

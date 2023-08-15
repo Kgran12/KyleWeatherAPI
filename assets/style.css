@@ -1,0 +1,75 @@
+body {
+    margin : 7px;
+}
+
+main {
+    display : flex;
+    margin-top: 8px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.search-area {
+    width: 30%;
+    margin: 8px 18px 0 10px;
+    padding: 8px 0 8px 8px;
+    background-color: lightslategrey;
+}
+
+.search-button-pannel {
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.city-list {
+    margin-top: 5px;
+}
+
+.cityNameDisplay {
+   width: 75%;
+}
+
+.results-pannel {
+    width: 70%;
+    padding: 8px 0 8px 8px;
+    visibility: hidden;
+    background-color: lightslategrey;
+}
+
+.current-results-pannel {
+    background-color: lightslategrey;
+    border-right: none;
+    padding: 8px 0 8px 8px;
+}
+
+.name-block {
+    display: flex;
+    align-items: center;
+}
+
+#uvIndex {
+    margin-left: 5px;
+    padding: 5px 10px;
+}
+
+.forecast-pannel {
+    padding-top: 45px;
+}
+
+.container {
+    display: inline-block;
+}
+
+.card-header {
+    text-align: center;
+    background-color: rgb(10, 10, 10);
+    color: white;
+}
+
+.card-body {
+    background-color: lightslategrey;
+}
