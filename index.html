@@ -19,16 +19,16 @@
                     <div class="form-row align-items-center">
                         <div class="col-auto search-field">
                             <label class="sr-only" for="cityName">City</label>
-                            <input type="text" class="form-control mb-2" id="cityName" placeholder="City Name">
+                            <input id="city-search" type="text" class="form-control mb-2" placeholder="City Name">
                         </div>
                         <div class="col-auto search-button-pannel">
                             <button type="submit" class="btn btn-primary mb-2" id="searchBtn">Search</button>
                         </div>
                     </div>
-                    <div class="city-list">
-                        <ul class="list-group" id="cityList"></ul>
-                    </div>
                 </form>
+                <h3>Search History</h3>
+                <div class="searchHistory" id="searchHistory">
+                </div>
             </div>
         </aside>
         <section class="results-pannel">
@@ -36,6 +36,9 @@
                 <div class="name-block"></div>
                 <h3 id="cityNameDisplay">
                 </h3>
+            </div>
+            <div>
+                <p class="current-results" id="date"></p>
             </div>
             <div>
                 <p class="current-results" id="temp"></p>
@@ -46,85 +49,19 @@
             <div>
                 <p class="current-results" id="windSpeed"></p>
             </div>
-            <div>
-                <p class="current-results" id="uvIndex"></p>
-            </div>
-            <div class="five-day-pannel">
+            <div class="card p-1" style = "width: 95%">
                 <h3>5-Day Forecast:</h3>
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h5 id="dateZero"></h5>
-                                </div>
-                                <div class="card-body">
-                                    <img src="" alt="" id="iconZero">
-                                    <p class="card-text" id="tempZero"></p>
-                                    <p class="card-text" id="humidityZero"></p>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h5 id="dateOne"></h5>
-                                </div>
-                                <div class="card-body">
-                                    <img src="" alt="" id="iconOne">
-                                    <p class="card-text" id="tempOne"></p>
-                                    <p class="card-text" id="humidityOne"></p>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h5 id="dateTwo"></h5>
-                                </div>
-                                <div class="card-body">
-                                    <img src="" alt="" id="iconTwo">
-                                    <p class="card-text" id="tempTwo"></p>
-                                    <p class="card-text" id="humidityTwo"></p>
-
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h5 id="dateThree"></h5>
-                                    </div>
-                                    <div class="card-body">
-                                        <img src="" alt="" id="iconThree">
-                                        <p class="card-text" id="tempThree"></p>
-                                        <p class="card-text" id="humidityThree"></p>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class ="col">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h5 id="dateFour"></h5>
-                                    </div>
-                                    <div class="card-body">
-                                        <img src="" alt="" id="iconFour">
-                                        <p class="card-text" id="tempFour"></p>
-                                        <p class="card-text" id="humidityFour"></p>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div id="fiveDayForecast" class="row justify-content-around">
 
                 </div>
+            </div>
         </section>
     </main>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+        integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
     <script src="./assets/script.js"></script>
+
 
 </body>
 

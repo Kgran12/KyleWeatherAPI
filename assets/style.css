@@ -36,7 +36,7 @@ main {
 .results-pannel {
     width: 70%;
     padding: 8px 0 8px 8px;
-    visibility: hidden;
+    /* visibility: hidden; */
     background-color: lightslategrey;
 }
 
