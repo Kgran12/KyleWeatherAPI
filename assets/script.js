@@ -81,7 +81,7 @@ function getData(city, newButton = false) {
 function getCurrent(currentData) {
     if (!currentData) return;
 
-    date.textContent = `${currentData.name} (${day.js().format("M/D/YYYY")})`;
+    date.textContent = `${currentData.name} (${dayjs().format("M/D/YYYY")})`;
     var icon = document.createElement("img");
     icon.classList.add("icon");
     icon.src = `https://openweathermap.org/img/wn/${currentData.weather[0].icon}.png`;
@@ -91,7 +91,7 @@ function getCurrent(currentData) {
     humidity.textContent = `Humidity: ${currentData.main.humidity}%`;
     windSpeed.textContent = `Wind Speed: ${currentData.wind.speed} MPH`;
 
-c
+
 }
 
 saveHistory();
@@ -137,7 +137,7 @@ function printFiveDay(forecast) {
     for (let i =0; i < forecast.length; i++) {
         var day = forecast[i];
         var card = document.createElement("div");
-       
+
         card.classList.add("card", "bg-primary", "text-white", "col-md-2", "col-sm-12", "m-2");
 
         for (const weatherType in day) {
@@ -155,15 +155,16 @@ function printFiveDay(forecast) {
 
             } else {
                 var condition = document.createElement("span");
-                condition.textContent = `${day[weatherType][1]}: ${day[weatherType][0]} `;
+                condition.textContent = `${weatherType}: ${day[weatherType][0]} `;
                 condition.classList.add("d-block");
                 card.append(condition);
                 condition.setAttribute("style", "font-weight: bold");
             }
         }
+        
+        fiveDayForecast.append(card);
     }
-    fiveDayForecast.append(card);
-
+   
 }
 
 searchBtn.addEventListener("click", function (event) {
